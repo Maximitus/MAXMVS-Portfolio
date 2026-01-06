@@ -1,0 +1,8 @@
+{
+  "name": "MAXMVS | Multi-Disciplinary Portfolio",
+  "description": "Professional hub for MAXMVS - Specializing in Structural Engineering, Fine Woodworking, Fitness, and Software Development.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
