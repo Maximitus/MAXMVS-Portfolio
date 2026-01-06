@@ -3,7 +3,7 @@ import { Category } from './types';
 import { PROJECTS, CATEGORY_ICONS } from './constants';
 import { ProjectCard } from './components/ProjectCard';
 import { AIAssistant } from './components/AIAssistant';
-import { Github, Globe, Menu, X, ArrowUpRight, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Github, Globe, Menu, X, ArrowUpRight, Instagram, Linkedin, Mail, Send } from 'lucide-react';
 
 const Logo = ({ className = "w-32" }: { className?: string }) => (
   <div className={`flex flex-col items-center group cursor-pointer ${className}`}>
@@ -61,6 +61,27 @@ const App: React.FC = () => {
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
+        
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full glass border-b border-brand-orange/20 p-6 flex flex-col gap-4 animate-in slide-in-from-top-2">
+             {['All', ...Object.values(Category)].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => { setFilter(cat as any); setIsMenuOpen(false); }}
+                  className={`text-left uppercase tracking-widest text-xs py-2 ${
+                    filter === cat ? 'text-brand-orange' : 'text-gray-400'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+              <div className="flex gap-4 pt-4 border-t border-brand-orange/10">
+                <a href="https://github.com/Maximitus" target="_blank" className="text-brand-orange"><Github /></a>
+                <a href="https://mass-engineering.com/" target="_blank" className="text-brand-orange"><Globe /></a>
+              </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -157,6 +178,20 @@ const App: React.FC = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-black brand-font italic">LET'S BUILD SOMETHING <span className="text-brand-orange">STRUCTURAL.</span></h2>
+          <p className="text-xl text-gray-400">Whether it's a structural analysis, a custom shop build, or a complex software integration, the MAXMVS methodology guarantees results.</p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <a href="mailto:max@mass-engineering.com" className="px-10 py-5 bg-brand-orange text-brand-slate font-black uppercase tracking-widest rounded-full hover:bg-white transition-colors flex items-center gap-2 group">
+              Start Project <Send className="group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-orange/5 blur-[120px] rounded-full"></div>
       </section>
 
       {/* Footer */}

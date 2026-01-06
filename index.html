@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO & Social Meta Tags -->
     <title>MAXMVS | Structural Engineering • Craft • Code</title>
+    <meta name="description" content="The professional portfolio of MAXMVS. Specializing in high-performance structural engineering, fine woodworking, fitness programming, and software development." />
+    <meta name="keywords" content="Structural Engineering, Mass Engineering, Woodworking, Fitness Training, React Developer, Python Automation" />
+    <meta property="og:title" content="MAXMVS | Precision Defined" />
+    <meta property="og:description" content="Synthesizing structural integrity, computational logic, and artisanal craft." />
+    <meta property="og:url" content="https://maxmvs.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -68,6 +78,11 @@
         background: #ff8800;
         width: 100%;
       }
+
+      .selection-orange::selection {
+        background-color: #ff8800;
+        color: #2a3439;
+      }
     </style>
   <script type="importmap">
 {
@@ -81,7 +96,7 @@
 }
 </script>
 </head>
-  <body>
+  <body class="selection-orange">
     <div id="root"></div>
   </body>
 </html>
