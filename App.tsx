@@ -3,7 +3,7 @@ import { Category } from './types';
 import { PROJECTS, CATEGORY_ICONS } from './constants';
 import { ProjectCard } from './components/ProjectCard';
 import { AIAssistant } from './components/AIAssistant';
-import { Github, Globe, Menu, X, ArrowUpRight, Instagram, Linkedin, Mail, Send } from 'lucide-react';
+import { Github, Globe, Menu, X, ArrowUpRight, Linkedin } from 'lucide-react';
 
 const Logo = ({ className = "w-32" }: { className?: string }) => (
   <div className={`flex flex-col items-center group cursor-pointer ${className}`}>
@@ -185,11 +185,6 @@ const App: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-black brand-font italic">LET'S BUILD SOMETHING <span className="text-brand-orange">STRUCTURAL.</span></h2>
           <p className="text-xl text-gray-400">Whether it's a luxury custom home in ArchiCAD, a structural analysis, a custom shop build, or a complex software integration, the MAXMVS methodology guarantees results.</p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a href="mailto:max@mass-engineering.com" className="px-10 py-5 bg-brand-orange text-brand-slate font-black uppercase tracking-widest rounded-full hover:bg-white transition-colors flex items-center gap-2 group">
-              Start Project <Send className="group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-orange/5 blur-[120px] rounded-full"></div>
       </section>
@@ -203,9 +198,7 @@ const App: React.FC = () => {
               MAXMVS is a multi-disciplinary brand focused on high-integrity structural engineering, specializing in luxury custom homes designed in ArchiCAD, bespoke craft, and computational innovation.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-lg bg-brand-slate flex items-center justify-center hover:bg-brand-orange hover:text-brand-slate transition-all"><Instagram size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-brand-slate flex items-center justify-center hover:bg-brand-orange hover:text-brand-slate transition-all"><Linkedin size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-brand-slate flex items-center justify-center hover:bg-brand-orange hover:text-brand-slate transition-all"><Mail size={18} /></a>
+              <a href="https://www.linkedin.com/in/maxwell-nelson-620975156/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-brand-slate flex items-center justify-center hover:bg-brand-orange hover:text-brand-slate transition-all"><Linkedin size={18} /></a>
             </div>
           </div>
           
