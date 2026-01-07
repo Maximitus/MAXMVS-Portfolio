@@ -102,8 +102,8 @@ const App: React.FC = () => {
             </h1>
             
             <p className="text-xl text-gray-400 max-w-xl leading-relaxed">
-              Synthesizing structural integrity, computational logic, and artisanal craft to build high-performance systems and structures. 
-              From high-rise steel to handcrafted walnut.
+              Expert structural engineer specializing in luxury custom homes designed in ArchiCAD. Synthesizing structural integrity, computational logic, and artisanal craft to build high-performance systems and structures. 
+              From luxury residential projects in ArchiCAD to high-rise steel and handcrafted walnut.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -184,7 +184,7 @@ const App: React.FC = () => {
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
           <h2 className="text-4xl md:text-5xl font-black brand-font italic">LET'S BUILD SOMETHING <span className="text-brand-orange">STRUCTURAL.</span></h2>
-          <p className="text-xl text-gray-400">Whether it's a structural analysis, a custom shop build, or a complex software integration, the MAXMVS methodology guarantees results.</p>
+          <p className="text-xl text-gray-400">Whether it's a luxury custom home in ArchiCAD, a structural analysis, a custom shop build, or a complex software integration, the MAXMVS methodology guarantees results.</p>
           <div className="flex flex-wrap justify-center gap-6">
             <a href="mailto:max@mass-engineering.com" className="px-10 py-5 bg-brand-orange text-brand-slate font-black uppercase tracking-widest rounded-full hover:bg-white transition-colors flex items-center gap-2 group">
               Start Project <Send className="group-hover:translate-x-1 transition-transform" />
@@ -200,7 +200,7 @@ const App: React.FC = () => {
           <div className="md:col-span-2 space-y-6">
             <Logo className="w-40" />
             <p className="text-gray-400 max-w-sm">
-              MAXMVS is a multi-disciplinary brand focused on high-integrity engineering, bespoke craft, and computational innovation.
+              MAXMVS is a multi-disciplinary brand focused on high-integrity structural engineering, specializing in luxury custom homes designed in ArchiCAD, bespoke craft, and computational innovation.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-lg bg-brand-slate flex items-center justify-center hover:bg-brand-orange hover:text-brand-slate transition-all"><Instagram size={18} /></a>

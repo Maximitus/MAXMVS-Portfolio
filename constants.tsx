@@ -48,6 +48,15 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '5',
+    title: 'Luxury Custom Home - ArchiCAD Design',
+    category: Category.STRUCTURAL,
+    description: 'Complete structural engineering for luxury custom home designed in ArchiCAD. Full structural analysis, design, and permitting for high-end residential project.',
+    image: 'https://picsum.photos/seed/archicad-home/800/600',
+    tags: ['ArchiCAD', 'Luxury Homes', 'Residential', 'Structural Design'],
+    link: 'https://mass-engineering.com/'
+  },
+  {
+    id: '7',
     title: 'Residential Retaining Wall',
     category: Category.STRUCTURAL,
     description: 'Full design and permitting for a complex hillside residential project.',
