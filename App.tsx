@@ -122,7 +122,7 @@ const App: React.FC = () => {
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-brand-dark/50 border border-brand-orange/30 text-white font-bold uppercase tracking-tighter rounded-lg hover:border-brand-orange transition-all"
               >
-                GitHub Hub
+                GitHub
               </a>
             </div>
           </div>
