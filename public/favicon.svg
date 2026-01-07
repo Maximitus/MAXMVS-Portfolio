@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#2a3439"/>
+  
+  <!-- Top line -->
+  <rect x="10" y="14" width="44" height="2.5" fill="#ff8800" rx="1.25"/>
+  
+  <!-- Bold M letter - filled for visibility -->
+  <path d="M 18 22 L 18 40 L 26 30 L 32 40 L 32 22 L 28 22 L 28 36 L 26 32 L 24 36 L 24 22 Z" fill="#ffffff"/>
+  
+  <!-- Bottom line -->
+  <rect x="10" y="48" width="44" height="2.5" fill="#ff8800" rx="1.25"/>
+</svg>
