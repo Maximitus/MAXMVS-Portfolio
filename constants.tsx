@@ -12,15 +12,6 @@ export const CATEGORY_ICONS = {
 
 export const PROJECTS: Project[] = [
   {
-    id: '1',
-    title: 'High-Rise Steel Optimization',
-    category: Category.STRUCTURAL,
-    description: 'Developed a custom analysis tool for optimizing seismic loads in urban high-rise commercial structures.',
-    image: 'https://picsum.photos/seed/structural/800/600',
-    tags: ['ETABS', 'Python', 'Seismic Design'],
-    link: 'https://mass-engineering.com/'
-  },
-  {
     id: '2',
     title: 'Walnut Dining Table',
     category: Category.WOODWORKING,
@@ -63,13 +54,5 @@ export const PROJECTS: Project[] = [
     image: 'https://picsum.photos/seed/wall/800/600',
     tags: ['Civil', 'CAD', 'Permitting'],
     link: 'https://mass-engineering.com/'
-  },
-  {
-    id: '6',
-    title: 'Modern Coffee Station',
-    category: Category.WOODWORKING,
-    description: 'Built-in ash and oak coffee station with integrated lighting and minimalist drawer slides.',
-    image: 'https://picsum.photos/seed/coffee/800/600',
-    tags: ['Ash', 'Modern', 'Cabinetry'],
   }
 ];
