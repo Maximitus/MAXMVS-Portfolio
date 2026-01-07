@@ -103,7 +103,7 @@ const App: React.FC = () => {
             
             <p className="text-xl text-gray-400 max-w-xl leading-relaxed">
               Expert structural engineer specializing in luxury custom homes designed in ArchiCAD. Synthesizing structural integrity, computational logic, and artisanal craft to build high-performance systems and structures. 
-              From luxury residential projects in ArchiCAD to high-rise steel and handcrafted walnut.
+              From luxury residential projects in ArchiCAD to handcrafted walnut.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
