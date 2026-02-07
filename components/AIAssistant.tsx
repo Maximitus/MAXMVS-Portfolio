@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { askMaxAssistant } from '../services/geminiService';
 import { Send, X, Loader2, Cpu } from 'lucide-react';
-import { ChatMessage } from '../types';
+import { askMaxAssistant } from '../services/geminiService.ts';
+import { ChatMessage } from '../types.ts';
 
-export const AIAssistant: React.FC = () => {
+/**
+ * AIAssistant component provides a chat interface for users to interact with the MAXMVS Intelligence Unit.
+ */
+export function AIAssistant(): React.ReactElement {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
     { role: 'model', text: 'MAXMVS Intelligence Unit active. How can I assist you with Max\'s engineering, craft, or development protocols?' }
@@ -18,31 +21,43 @@ export const AIAssistant: React.FC = () => {
     }
   }, [messages]);
 
-  const handleSend = async () => {
-    if (!input.trim() || isLoading) return;
+  function handleSend(): void {
+    if (!input.trim() || isLoading) {
+      return;
+    }
 
     const userMsg = input.trim();
     setInput('');
-    setMessages(prev => [...prev, { role: 'user', text: userMsg }]);
+    setMessages((prev) => [...prev, { role: 'user', text: userMsg }]);
     setIsLoading(true);
 
-    try {
-      const history = messages.slice(-6);
-      const response = await askMaxAssistant(userMsg, history);
-      setMessages(prev => [...prev, { role: 'model', text: response || 'Data retrieval failure. Please rephrase.' }]);
-    } catch (error) {
-      console.error(error);
-      setMessages(prev => [...prev, { role: 'model', text: 'Error connecting to the neural link. Retry suggested.' }]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    const history = messages.slice(-6);
+
+    askMaxAssistant(userMsg, history)
+      .then((response) => {
+        setMessages((prev) => [...prev, {
+          role: 'model',
+          text: response || 'Data retrieval failure. Please rephrase.'
+        }]);
+      })
+      .catch((error) => {
+        console.error('AI Assistant Error:', error);
+        setMessages((prev) => [...prev, {
+          role: 'model',
+          text: 'Error connecting to the neural link. Retry suggested.'
+        }]);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }
 
   return (
     <>
       <button 
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 w-14 h-14 bg-brand-orange text-brand-slate rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-40 orange-glow border-2 border-brand-slate"
+        aria-label="Open AI Assistant"
       >
         <Cpu className="animate-pulse" />
       </button>
@@ -102,4 +117,4 @@ export const AIAssistant: React.FC = () => {
       )}
     </>
   );
-};
+}

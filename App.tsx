@@ -1,26 +1,42 @@
 import React, { useState, useMemo } from 'react';
-import { Category } from './types';
-import { PROJECTS, CATEGORY_ICONS } from './constants';
-import { ProjectCard } from './components/ProjectCard';
-import { AIAssistant } from './components/AIAssistant';
 import { Github, Globe, Menu, X, ArrowUpRight, Linkedin } from 'lucide-react';
+import { AIAssistant } from './components/AIAssistant.tsx';
+import { ProjectCard } from './components/ProjectCard.tsx';
+import { CATEGORY_ICONS, PROJECTS } from './constants.tsx';
+import { Category } from './types.ts';
 
-const Logo = ({ className = "w-32" }: { className?: string }) => (
-  <div className={`flex flex-col items-center group cursor-pointer ${className}`}>
-    <div className="h-[2px] w-full bg-brand-orange mb-1 group-hover:scale-x-110 transition-transform duration-500"></div>
-    <div className="text-2xl font-bold tracking-[0.2em] leading-none py-1 text-white brand-font uppercase">
-      MΛXMVS
+interface LogoProps {
+  className?: string;
+}
+
+/**
+ * Renders the MAXMVS logo with animated underline.
+ */
+function Logo({ className = "w-32" }: LogoProps): React.ReactElement {
+  return (
+    <div className={`flex flex-col items-center group cursor-pointer ${className}`}>
+      <div className="h-[2px] w-full bg-brand-orange mb-1 group-hover:scale-x-110 transition-transform duration-500"></div>
+      <div className="text-2xl font-bold tracking-[0.2em] leading-none py-1 text-white brand-font uppercase">
+        MΛXMVS
+      </div>
+      <div className="h-[2px] w-full bg-brand-orange mt-1 group-hover:scale-x-110 transition-transform duration-500"></div>
     </div>
-    <div className="h-[2px] w-full bg-brand-orange mt-1 group-hover:scale-x-110 transition-transform duration-500"></div>
-  </div>
-);
+  );
+}
 
-const App: React.FC = () => {
-  const [filter, setFilter] = useState<Category | 'All'>('All');
+type FilterValue = Category | 'All';
+
+/**
+ * Main application component representing the MAXMVS Portfolio Hub.
+ */
+function App(): React.ReactElement {
+  const [filter, setFilter] = useState<FilterValue>('All');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const filters: FilterValue[] = ['All', ...Object.values(Category)];
+
   const filteredProjects = useMemo(() => {
-    return filter === 'All' ? PROJECTS : PROJECTS.filter(p => p.category === filter);
+    return filter === 'All' ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
   }, [filter]);
 
   return (
@@ -32,10 +48,10 @@ const App: React.FC = () => {
           
           <div className="hidden md:flex items-center gap-8">
             <div className="flex gap-6 text-sm font-medium text-gray-400">
-              {['All', ...Object.values(Category)].map((cat) => (
+              {filters.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setFilter(cat as any)}
+                  onClick={() => setFilter(cat)}
                   className={`hover:text-brand-orange transition-colors uppercase tracking-widest text-[10px] ${
                     filter === cat ? 'text-brand-orange font-bold' : ''
                   }`}
@@ -65,10 +81,13 @@ const App: React.FC = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full glass border-b border-brand-orange/20 p-6 flex flex-col gap-4 animate-in slide-in-from-top-2">
-             {['All', ...Object.values(Category)].map((cat) => (
+             {filters.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => { setFilter(cat as any); setIsMenuOpen(false); }}
+                  onClick={() => {
+                    setFilter(cat);
+                    setIsMenuOpen(false);
+                  }}
                   className={`text-left uppercase tracking-widest text-xs py-2 ${
                     filter === cat ? 'text-brand-orange' : 'text-gray-400'
                   }`}
@@ -154,10 +173,10 @@ const App: React.FC = () => {
             </div>
             
             <div className="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto">
-              {['All', ...Object.values(Category)].map((cat) => (
+              {filters.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setFilter(cat as any)}
+                  onClick={() => setFilter(cat)}
                   className={`whitespace-nowrap px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all ${
                     filter === cat 
                       ? 'bg-brand-orange text-brand-slate' 
@@ -198,7 +217,7 @@ const App: React.FC = () => {
               MAXMVS is a multi-disciplinary brand focused on high-integrity structural engineering, specializing in luxury custom homes designed in ArchiCAD, bespoke craft, and computational innovation.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/maxwell-nelson-620975156/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-brand-slate flex items-center justify-center hover:bg-brand-orange hover:text-brand-slate transition-all"><Linkedin size={18} /></a>
+              <a href="https://www.linkedin.com/in/maxwell-nelson-620975156/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-brand-slate flex items-center justify-center hover:bg-brand-orange hover:text-brand-slate transition-all" aria-label="LinkedIn"><Linkedin size={18} /></a>
             </div>
           </div>
           
@@ -235,6 +254,6 @@ const App: React.FC = () => {
       <AIAssistant />
     </div>
   );
-};
+}
 
 export default App;

@@ -1,14 +1,16 @@
-
 import React from 'react';
-import { Project, Category } from '../types';
-import { CATEGORY_ICONS } from '../constants';
 import { ExternalLink, Github } from 'lucide-react';
+import { CATEGORY_ICONS } from '../constants.tsx';
+import { Project } from '../types.ts';
 
 interface ProjectCardProps {
   project: Project;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+/**
+ * Renders a card displaying project information including title, description, and tags.
+ */
+export function ProjectCard({ project }: ProjectCardProps): React.ReactElement {
   return (
     <div className="group relative bg-brand-dark rounded-xl overflow-hidden border border-brand-slate/50 hover:border-brand-orange/50 transition-all duration-300 transform hover:-translate-y-2">
       <div className="aspect-video overflow-hidden">
@@ -34,7 +36,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </p>
         
         <div className="flex flex-wrap gap-2 mb-6">
-          {project.tags.map(tag => (
+          {project.tags.map((tag) => (
             <span key={tag} className="px-2 py-1 bg-brand-slate text-[10px] rounded border border-brand-slate text-gray-300">
               #{tag}
             </span>
@@ -55,4 +57,4 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
     </div>
   );
-};
+}

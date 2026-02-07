@@ -1,7 +1,14 @@
 import { GoogleGenAI } from "@google/genai";
 
-export const askMaxAssistant = async (prompt: string, history: { role: 'user' | 'model', text: string }[]) => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+/**
+ * Communicates with the Gemini AI to get a response from the MAXMVS Intelligence Unit.
+ */
+export async function askMaxAssistant(
+  prompt: string,
+  history: { role: 'user' | 'model'; text: string }[]
+): Promise<string> {
+  const apiKey = process.env.API_KEY || '';
+  const ai = new GoogleGenAI({ apiKey });
   
   const systemInstruction = `
     You are the "MAXMVS Intelligence Unit", an AI representative for Max and his brand MAXMVS.
@@ -20,7 +27,7 @@ export const askMaxAssistant = async (prompt: string, history: { role: 'user' | 
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
     contents: [
-        ...history.map(h => ({ role: (h.role === 'user' ? 'user' : 'model'), parts: [{ text: h.text }] })),
+        ...history.map(h => ({ role: h.role === 'user' ? 'user' : 'model', parts: [{ text: h.text }] })),
         { role: 'user', parts: [{ text: prompt }] }
     ],
     config: {
@@ -30,5 +37,5 @@ export const askMaxAssistant = async (prompt: string, history: { role: 'user' | 
     }
   });
 
-  return response.text;
-};
+  return response.text || 'No response generated.';
+}
