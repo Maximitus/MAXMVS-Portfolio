@@ -1,9 +1,8 @@
-
 import React from 'react';
-import { Category, Project } from './types';
 import { HardHat, Hammer, Dumbbell, Code } from 'lucide-react';
+import { Category, Project } from './types.ts';
 
-export const CATEGORY_ICONS = {
+export const CATEGORY_ICONS: Record<Category, React.ReactElement> = {
   [Category.STRUCTURAL]: <HardHat className="w-6 h-6" />,
   [Category.WOODWORKING]: <Hammer className="w-6 h-6" />,
   [Category.FITNESS]: <Dumbbell className="w-6 h-6" />,
