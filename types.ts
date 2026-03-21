@@ -15,8 +15,3 @@ export interface Project {
   tags: string[];
   link?: string;
 }
-
-export interface ChatMessage {
-  role: 'user' | 'model';
-  text: string;
-}

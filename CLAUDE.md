@@ -1,7 +1,7 @@
 # CLAUDE.md - Coding Standards
 
 ## Project Overview
-Portfolio project for MAXMVS, featuring structural engineering, woodworking, fitness, and coding disciplines. Built with React, Vite, Tailwind CSS, and Google Gemini AI.
+Portfolio project for MAXMVS, featuring structural engineering, woodworking, fitness, and coding disciplines. Built with React, Vite, and Tailwind CSS.
 
 ## Coding Standards
 

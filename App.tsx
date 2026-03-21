@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { Github, Globe, Menu, X, ArrowUpRight, Linkedin } from 'lucide-react';
-import { AIAssistant } from './components/AIAssistant.tsx';
 import { ProjectCard } from './components/ProjectCard.tsx';
 import { CATEGORY_ICONS, PROJECTS } from './constants.tsx';
 import { Category } from './types.ts';
@@ -250,8 +249,6 @@ function App(): React.ReactElement {
           </div>
         </div>
       </footer>
-
-      <AIAssistant />
     </div>
   );
 }

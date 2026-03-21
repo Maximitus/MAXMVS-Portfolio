@@ -17,17 +17,12 @@ Professional portfolio showcasing structural engineering expertise, specializing
    npm install
    ```
 
-2. Set the `GEMINI_API_KEY` in `.env.local` (optional, only needed for AI Assistant feature):
-   ```bash
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-3. Run the development server:
+2. Run the development server:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Build for Production
 
@@ -52,4 +47,3 @@ This project is automatically deployed to [Cloudflare Pages](https://pages.cloud
 - **Vite** - Build tool
 - **Tailwind CSS** - Styling
 - **Cloudflare Pages** - Hosting
-- **Google Gemini AI** - AI Assistant feature
