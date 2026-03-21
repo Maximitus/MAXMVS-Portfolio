@@ -11,6 +11,8 @@ interface ProjectCardProps {
  * Renders a card displaying project information including title, description, and tags.
  */
 export function ProjectCard({ project }: ProjectCardProps): React.ReactElement {
+  const categories = Array.isArray(project.category) ? project.category : [project.category];
+
   return (
     <div className="group relative bg-brand-dark rounded-xl overflow-hidden border border-brand-slate/50 hover:border-brand-orange/50 transition-all duration-300 transform hover:-translate-y-2">
       <div className="aspect-video overflow-hidden">
@@ -22,9 +24,14 @@ export function ProjectCard({ project }: ProjectCardProps): React.ReactElement {
       </div>
       
       <div className="p-6">
-        <div className="flex items-center gap-2 text-brand-orange mb-3">
-          {CATEGORY_ICONS[project.category]}
-          <span className="text-xs font-bold uppercase tracking-widest">{project.category}</span>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-brand-orange mb-3">
+          {categories.map((cat, i) => (
+            <span key={cat} className="inline-flex items-center gap-2">
+              {i > 0 && <span className="text-brand-orange/35 select-none" aria-hidden>·</span>}
+              {CATEGORY_ICONS[cat]}
+              <span className="text-xs font-bold uppercase tracking-widest">{cat}</span>
+            </span>
+          ))}
         </div>
         
         <h3 className="text-xl font-bold mb-2 group-hover:text-brand-orange transition-colors">

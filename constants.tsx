@@ -30,11 +30,11 @@ export const PROJECTS: Project[] = [
   {
     id: '8',
     title: 'Macro Counter',
-    category: Category.FITNESS,
+    category: [Category.FITNESS, Category.CODING],
     description:
-      'A diet macro counter for tracking protein, carbs, and fat—built to simplify daily nutrition goals.',
+      'A macro-tracking web app for protein, carbs, and fat—fitness-focused nutrition tooling built with deliberate UX and solid front-end craft.',
     image: 'https://picsum.photos/seed/macrocounter/800/600',
-    tags: ['Nutrition', 'Macros', 'Web App'],
+    tags: ['Web App', 'Nutrition', 'Macros'],
     link: 'https://maxmvs.com/macrocounter',
   },
   {

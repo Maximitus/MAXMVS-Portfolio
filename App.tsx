@@ -35,7 +35,11 @@ function App(): React.ReactElement {
   const filters: FilterValue[] = ['All', ...Object.values(Category)];
 
   const filteredProjects = useMemo(() => {
-    return filter === 'All' ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
+    if (filter === 'All') return PROJECTS;
+    return PROJECTS.filter((p) => {
+      const cats = Array.isArray(p.category) ? p.category : [p.category];
+      return cats.includes(filter);
+    });
   }, [filter]);
 
   return (

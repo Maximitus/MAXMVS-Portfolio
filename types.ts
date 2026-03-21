@@ -9,7 +9,8 @@ export enum Category {
 export interface Project {
   id: string;
   title: string;
-  category: Category;
+  /** Single category, or multiple when a project spans domains (e.g. fitness + coding). */
+  category: Category | Category[];
   description: string;
   image: string;
   tags: string[];
