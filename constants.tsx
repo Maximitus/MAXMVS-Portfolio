@@ -28,6 +28,16 @@ export const PROJECTS: Project[] = [
     link: 'https://github.com/Maximitus'
   },
   {
+    id: '8',
+    title: 'Macro Counter',
+    category: Category.FITNESS,
+    description:
+      'A diet macro counter for tracking protein, carbs, and fat—built to simplify daily nutrition goals.',
+    image: 'https://picsum.photos/seed/macrocounter/800/600',
+    tags: ['Nutrition', 'Macros', 'Web App'],
+    link: 'https://maxmvs.com/macrocounter',
+  },
+  {
     id: '4',
     title: 'Structural Calc Automation',
     category: Category.CODING,
