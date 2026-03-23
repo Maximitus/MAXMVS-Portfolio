@@ -38,6 +38,16 @@ export const PROJECTS: Project[] = [
     link: 'https://maxmvs.com/macrocounter',
   },
   {
+    id: '9',
+    title: 'Form Analyzer',
+    category: [Category.FITNESS, Category.CODING],
+    description:
+      'A form analyzer that helps assess movement quality by measuring stride angle and squat depth from uploaded footage.',
+    image: 'https://picsum.photos/seed/formanalyzer/800/600',
+    tags: ['Biomechanics', 'Computer Vision', 'Web App'],
+    link: 'https://maxmvs.com/formanalyzer',
+  },
+  {
     id: '4',
     title: 'Structural Calc Automation',
     category: Category.CODING,
