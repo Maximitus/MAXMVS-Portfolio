@@ -58,7 +58,7 @@ export function ProjectCard({ project }: ProjectCardProps): React.ReactElement {
             className="inline-flex items-center gap-2 text-brand-orange text-sm font-semibold hover:underline"
           >
             {project.link.includes('github') ? <Github size={16} /> : <ExternalLink size={16} />}
-            View Project
+            {project.linkLabel ?? 'View Project'}
           </a>
         )}
       </div>

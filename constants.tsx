@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
     title: 'Walnut Dining Table',
     category: Category.WOODWORKING,
     description: 'Custom live-edge walnut dining table with hand-cut dovetail joinery and epoxy inlay.',
-    image: 'https://picsum.photos/seed/wood/800/600',
+    image: 'https://images.unsplash.com/photo-1549187774-b4e9b0445b41?auto=format&fit=crop&w=1200&q=80',
     tags: ['Fine Furniture', 'Joinery', 'Walnut'],
   },
   {
@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
     title: 'Personal Training Dashboard',
     category: Category.FITNESS,
     description: 'A web-based tracker for powerlifting progress, calculating 1RM and volume periodization.',
-    image: 'https://picsum.photos/seed/fitness/800/600',
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80',
     tags: ['React', 'D3.js', 'Powerlifting'],
     link: 'https://github.com/Maximitus'
   },
@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     category: [Category.FITNESS, Category.CODING],
     description:
       'A macro-tracking web app for protein, carbs, and fat—fitness-focused nutrition tooling built with deliberate UX and solid front-end craft.',
-    image: 'https://picsum.photos/seed/macrocounter/800/600',
+    image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80',
     tags: ['Web App', 'Nutrition', 'Macros'],
     link: 'https://maxmvs.com/macrocounter',
   },
@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
     category: [Category.FITNESS, Category.CODING],
     description:
       'A form analyzer that helps assess movement quality by measuring stride angle and squat depth from uploaded footage.',
-    image: 'https://picsum.photos/seed/formanalyzer/800/600',
+    image: 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1200&q=80',
     tags: ['Biomechanics', 'Computer Vision', 'Web App'],
     link: 'https://maxmvs.com/formanalyzer',
   },
@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
     title: 'Structural Calc Automation',
     category: Category.CODING,
     description: 'Automating beam deflection calculations using Python and Revit API integration.',
-    image: 'https://picsum.photos/seed/code/800/600',
+    image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80',
     tags: ['Python', 'Automation', 'Revit'],
     link: 'https://github.com/Maximitus'
   },
@@ -61,16 +61,17 @@ export const PROJECTS: Project[] = [
     title: 'Luxury Custom Home - ArchiCAD Design',
     category: Category.STRUCTURAL,
     description: 'Complete structural engineering for luxury custom home designed in ArchiCAD. Full structural analysis, design, and permitting for high-end residential project.',
-    image: 'https://picsum.photos/seed/archicad-home/800/600',
+    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
     tags: ['ArchiCAD', 'Luxury Homes', 'Residential', 'Structural Design'],
-    link: 'https://mass-engineering.com/'
+    link: 'https://mass-engineering.com/',
+    linkLabel: 'Visit Website'
   },
   {
     id: '7',
     title: 'Residential Retaining Wall',
     category: Category.STRUCTURAL,
     description: 'Full design and permitting for a complex hillside residential project.',
-    image: 'https://picsum.photos/seed/wall/800/600',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     tags: ['Civil', 'CAD', 'Permitting'],
     link: 'https://mass-engineering.com/'
   }
