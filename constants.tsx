@@ -20,12 +20,12 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: 'Personal Training Dashboard',
-    category: Category.FITNESS,
-    description: 'A web-based tracker for powerlifting progress, calculating 1RM and volume periodization.',
+    title: 'Workout App',
+    category: [Category.FITNESS, Category.CODING],
+    description: 'A workout app with an AI personal trainer that guides programming, tracks performance, and adapts sessions to your goals.',
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80',
     tags: ['React', 'D3.js', 'Powerlifting'],
-    link: 'https://github.com/Maximitus'
+    link: 'https://maxmvs.com/workout'
   },
   {
     id: '8',
