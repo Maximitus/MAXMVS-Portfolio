@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
     description: 'A workout app with an AI personal trainer that guides programming, tracks performance, and adapts sessions to your goals.',
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80',
     tags: ['React', 'D3.js', 'Powerlifting'],
-    link: 'https://maxmvs.com/workout'
+    link: 'https://maxmvs.com/workout/'
   },
   {
     id: '8',
@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
       'A macro-tracking web app for protein, carbs, and fat—fitness-focused nutrition tooling built with deliberate UX and solid front-end craft.',
     image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80',
     tags: ['Web App', 'Nutrition', 'Macros'],
-    link: 'https://maxmvs.com/macrocounter',
+    link: 'https://maxmvs.com/macrocounter/'
   },
   {
     id: '9',
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
       'A form analyzer that helps assess movement quality by measuring stride angle and squat depth from uploaded footage.',
     image: 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1200&q=80',
     tags: ['Biomechanics', 'Computer Vision', 'Web App'],
-    link: 'https://maxmvs.com/formanalyzer',
+    link: 'https://maxmvs.com/formanalyzer/'
   },
   {
     id: '4',
